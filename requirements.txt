@@ -1,0 +1,11 @@
+streamlit
+pandas
+requests
+python-dotenv
+sqlalchemy
+plotly
+ipykernel
+jupyter
+pytest
+nbformat
+
