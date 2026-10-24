@@ -1,0 +1,14 @@
+venv/
+.env
+data/*.db
+data/raw/
+__pycache__/
+.ipynb_checkpoints/
+.vscode/
+logs/
+data/quota.json
+.streamlit/secrets.toml
+data/api_budget.json
+
+
+
