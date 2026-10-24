@@ -5,12 +5,12 @@ with a normalized SQL database to deliver live scores, player rankings, 25 analy
 queries, and full CRUD management of player records.
 
 ---
-**Live demo:** 
-<your-app>.streamlit.app  · 
+**Project Report:** 
+<https://drive.google.com/file/d/1vCEWNtMZXOdS_fOjhHyLHT1cVT5T7ppb/view?usp=drive_link> 
 
 ---
 **Demo video:** 
-<video link>
+<https://drive.google.com/file/d/1foWF5Mg1cv1Ti-wyJ1paD5IRRtSNOeK1/view?usp=drive_link>
 
 ---
 ## **Features**
@@ -32,17 +32,6 @@ queries, and full CRUD management of player records.
 - ****Defensive by default:**** parameterized queries everywhere, whitelisted column names, input validation, secrets redacted from logs, friendly error messages with reference IDs.
 - ****Self-building:**** on a fresh install the app creates and fills its own database.
 - ****Well tested:**** 250+ automated tests, including page smoke tests, a secrets scanner and code-quality gates.
-
----
-## **Screenshots**
-
-| Home | Live Matches |
-
-| ![Home](documentation/screenshots/home.png) | ![Live](documentation/screenshots/live_matches.png) |
-| Top Stats | SQL Queries |
-| ![Top stats](documentation/screenshots/top_stats.png) | ![SQL](documentation/screenshots/sql_queries.png) |
-| CRUD | Analytics charts |
-| ![CRUD](documentation/screenshots/crud.png) | ![Charts](documentation/screenshots/charts.png) |
 
 ---
 ## **Tech stack**
@@ -170,26 +159,9 @@ All settings are environment variables (a `.env` file locally, or *Secrets* on a
   The generator is seeded, so results are reproducible.
 
 ---
-## ***Testing and quality***
-
-```bash
-python -m pytest        # 250+ tests
-python -m ruff check .  # lint
-```
-
-- Unit tests for validation, CRUD, parsing, statistics and the 25 queries
-- **Page smoke tests** that load every page headlessly against a fresh database
-- Failure-path tests: API down, saved-response fallback, budget exhausted, corrupt files
-- Quality gates: every file compiles, public functions have docstrings, `.env` is git-ignored,
-  and **no API key appears in any file or notebook**
-- Test coverage of the logic layers: <your coverage %> (measure with `python -m pytest --cov`)
-
----
 ## ***Deployment***
 
-Deployed on Streamlit Community Cloud. Secrets are set in the host's *Secrets* settings
-(see [`.streamlit/secrets.toml.example`](.streamlit/secrets.toml.example)). Hosted settings
-used: `DEMO_MODE=1`, `API_DAILY_BUDGET=<n>`, `LIVE_CACHE_TTL=900`.
+Deployed on Streamlit Community Cloud. 
 
 ---
 ## ***Limitations and future work***
